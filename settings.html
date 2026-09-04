@@ -2772,7 +2772,7 @@ video {
       const listEl = document.getElementById('tasks-list-admin');
       listEl.innerHTML = 'Loading...';
       try {
-        const res = await adminFetch('/api/admin/tasks');
+        const res = await adminFetch('/api/admin-tasks');
         const data = await res.json();
         const tasks = data.tasks || [];
         if (tasks.length === 0) {
@@ -2803,7 +2803,7 @@ video {
         statusEl.className = 'text-sm text-red-400';
         return;
       }
-      const res = await adminFetch('/api/admin/tasks', { method: 'POST', body: JSON.stringify({ title, points, platform }) });
+      const res = await adminFetch('/api/admin-tasks', { method: 'POST', body: JSON.stringify({ title, points, platform }) });
       if (res.ok) {
         statusEl.textContent = 'Added!';
         statusEl.className = 'text-sm text-green-400';
@@ -2818,13 +2818,13 @@ video {
     }
 
     async function toggleTaskActive(id, active) {
-      await adminFetch('/api/admin/tasks', { method: 'PUT', body: JSON.stringify({ id, active }) });
+      await adminFetch('/api/admin-tasks', { method: 'PUT', body: JSON.stringify({ id, active }) });
       loadTasksAdmin();
     }
 
     async function deleteTask(id) {
       if (!confirm('Remove this task?')) return;
-      await adminFetch('/api/admin/tasks', { method: 'DELETE', body: JSON.stringify({ id }) });
+      await adminFetch('/api/admin-tasks', { method: 'DELETE', body: JSON.stringify({ id }) });
       loadTasksAdmin();
     }
 
@@ -2836,7 +2836,7 @@ video {
       const resultEl = document.getElementById('user-lookup-result');
       if (!userId) return;
       resultEl.innerHTML = 'Loading...';
-      const res = await adminFetch(`/api/admin/users?userId=${encodeURIComponent(userId)}`);
+      const res = await adminFetch(`/api/admin-users?userId=${encodeURIComponent(userId)}`);
       if (!res.ok) {
         resultEl.innerHTML = '<p class="text-sm text-red-400">User not found.</p>';
         return;
@@ -2859,7 +2859,7 @@ video {
     async function loadWithdrawalsAdmin() {
       const listEl = document.getElementById('withdrawals-list-admin');
       listEl.innerHTML = 'Loading...';
-      const res = await adminFetch('/api/admin/withdrawals');
+      const res = await adminFetch('/api/admin-withdrawals');
       const data = await res.json();
       const withdrawals = data.withdrawals || [];
       if (withdrawals.length === 0) {
@@ -2878,7 +2878,7 @@ video {
     }
 
     async function resolveWithdrawal(id, action) {
-      const res = await adminFetch('/api/admin/withdrawals', { method: 'POST', body: JSON.stringify({ id, action }) });
+      const res = await adminFetch('/api/admin-withdrawals', { method: 'POST', body: JSON.stringify({ id, action }) });
       if (!res.ok) {
         const data = await res.json();
         alert(data.error || 'Failed to resolve.');
@@ -2894,7 +2894,7 @@ video {
       const resultEl = document.getElementById('moderation-result');
       if (!userId) return;
       resultEl.innerHTML = 'Loading...';
-      const res = await adminFetch(`/api/admin/moderation?userId=${encodeURIComponent(userId)}`);
+      const res = await adminFetch(`/api/admin-moderation?userId=${encodeURIComponent(userId)}`);
       if (!res.ok) {
         resultEl.innerHTML = '<p class="text-sm text-red-400">User not found.</p>';
         return;
@@ -2910,7 +2910,7 @@ video {
     }
 
     async function setBanned(userId, banned) {
-      await adminFetch('/api/admin/moderation', { method: 'POST', body: JSON.stringify({ userId, banned }) });
+      await adminFetch('/api/admin-moderation', { method: 'POST', body: JSON.stringify({ userId, banned }) });
       checkModeration();
     }
 
@@ -2924,7 +2924,7 @@ video {
       if (!confirm('Send this message to every user?')) return;
       statusEl.textContent = 'Sending...';
       statusEl.className = 'text-sm text-gray-400';
-      const res = await adminFetch('/api/admin/broadcast', { method: 'POST', body: JSON.stringify({ message }) });
+      const res = await adminFetch('/api/admin-broadcast', { method: 'POST', body: JSON.stringify({ message }) });
       const data = await res.json();
       if (res.ok) {
         statusEl.textContent = `Sent to ${data.sent}/${data.total} users.`;
@@ -2965,7 +2965,7 @@ video {
       const resultEl = document.getElementById('referral-audit-result');
       if (!userId) return;
       resultEl.innerHTML = 'Loading...';
-      const res = await adminFetch(`/api/admin/referral-audit?userId=${encodeURIComponent(userId)}`);
+      const res = await adminFetch(`/api/admin-referral-audit?userId=${encodeURIComponent(userId)}`);
       if (!res.ok) {
         resultEl.innerHTML = '<p class="text-sm text-red-400">User not found.</p>';
         return;
@@ -2991,7 +2991,7 @@ video {
       const resultEl = document.getElementById('ledger-result');
       if (!userId) return;
       resultEl.innerHTML = 'Loading...';
-      const res = await adminFetch(`/api/admin/ledger?userId=${encodeURIComponent(userId)}`);
+      const res = await adminFetch(`/api/admin-ledger?userId=${encodeURIComponent(userId)}`);
       if (!res.ok) {
         resultEl.innerHTML = '<p class="text-sm text-red-400">Failed to load.</p>';
         return;

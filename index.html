@@ -2202,7 +2202,7 @@ video {
       
       try {
         // Check if user has joined all channels
-        const response = await fetch('/api/telegram/check-membership', {
+        const response = await fetch('/api/telegram-check-membership', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -2264,7 +2264,7 @@ video {
     // Initial check when page loads (called after channels finish loading)
     async function initialCheck() {
       try {
-        const response = await fetch('/api/telegram/check-membership', {
+        const response = await fetch('/api/telegram-check-membership', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
