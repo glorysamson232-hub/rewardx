@@ -2134,8 +2134,17 @@ video {
       const userInfoEl = document.getElementById('user-info');
       if (user && userInfoEl) {
         const displayName = `${user.first_name} ${user.last_name || ''}`.trim();
-        userInfoEl.textContent = `Welcome, ${displayName}! Please join our channels to continue.`;
-        userInfoEl.classList.remove('hidden');
+        fetch('/api/onboarding')
+          .then((r) => r.json())
+          .then((data) => {
+            const msg = data.message || 'Please join our channels to continue.';
+            userInfoEl.textContent = `Welcome, ${displayName}! ${msg}`;
+            userInfoEl.classList.remove('hidden');
+          })
+          .catch(() => {
+            userInfoEl.textContent = `Welcome, ${displayName}! Please join our channels to continue.`;
+            userInfoEl.classList.remove('hidden');
+          });
       }
     }
     

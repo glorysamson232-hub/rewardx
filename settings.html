@@ -2265,6 +2265,107 @@ video {
          <p id="links-status" class="text-sm"></p>
        </div>
      </div>
+
+     <!-- Tasks Content (initially hidden) -->
+     <div id="tasks-content" class="hidden bg-black p-8 text-white">
+       <h2 class="text-xl font-semibold mb-4">Tasks</h2>
+       <p class="text-sm text-gray-400 mb-4">Tasks users must complete to earn points and unlock withdrawal.</p>
+       <div id="tasks-list-admin" class="space-y-2 mb-6"></div>
+       <div class="space-y-3 max-w-md bg-gray-900 p-4 rounded-lg">
+         <h3 class="font-semibold">Add Task</h3>
+         <div>
+           <label class="text-sm font-medium leading-none">Title:</label>
+           <input type="text" id="new-task-title" placeholder="e.g. Follow us on TikTok" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm mt-2 bg-gray-800 border-gray-700 text-green-400">
+         </div>
+         <div>
+           <label class="text-sm font-medium leading-none">Points:</label>
+           <input type="number" id="new-task-points" placeholder="50" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm mt-2 bg-gray-800 border-gray-700 text-green-400">
+         </div>
+         <div>
+           <label class="text-sm font-medium leading-none">Platform:</label>
+           <select id="new-task-platform" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm mt-2 bg-gray-800 border-gray-700 text-green-400">
+             <option value="general">General</option>
+             <option value="facebook">Facebook</option>
+             <option value="tiktok">TikTok</option>
+             <option value="website">Website</option>
+           </select>
+         </div>
+         <button onclick="addTask()" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium h-9 px-4 py-2 w-full bg-blue-600 hover:bg-blue-700 text-white">Add</button>
+         <p id="tasks-status" class="text-sm"></p>
+       </div>
+     </div>
+
+     <!-- Users Content (initially hidden) -->
+     <div id="users-content" class="hidden bg-black p-8 text-white">
+       <h2 class="text-xl font-semibold mb-4">Users</h2>
+       <p class="text-sm text-gray-400 mb-4">Look up a user by their Telegram ID.</p>
+       <div class="flex gap-2 mb-4 max-w-md">
+         <input type="text" id="lookup-user-id" placeholder="Telegram user ID" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm bg-gray-800 border-gray-700 text-green-400">
+         <button onclick="lookupUser()" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium h-9 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white">Search</button>
+       </div>
+       <div id="user-lookup-result" class="max-w-md"></div>
+     </div>
+
+     <!-- Withdrawals Content (initially hidden) -->
+     <div id="withdrawals-content" class="hidden bg-black p-8 text-white">
+       <h2 class="text-xl font-semibold mb-4">Pending Withdrawals</h2>
+       <div id="withdrawals-list-admin" class="space-y-2"></div>
+     </div>
+
+     <!-- Moderation Content (initially hidden) -->
+     <div id="moderation-content" class="hidden bg-black p-8 text-white">
+       <h2 class="text-xl font-semibold mb-4">Moderation</h2>
+       <p class="text-sm text-gray-400 mb-4">Suspend a user's account — blocks them from earning or withdrawing.</p>
+       <div class="flex gap-2 mb-4 max-w-md">
+         <input type="text" id="mod-user-id" placeholder="Telegram user ID" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm bg-gray-800 border-gray-700 text-green-400">
+         <button onclick="checkModeration()" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium h-9 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white">Search</button>
+       </div>
+       <div id="moderation-result" class="max-w-md"></div>
+     </div>
+
+     <!-- Broadcast Content (initially hidden) -->
+     <div id="broadcast-content" class="hidden bg-black p-8 text-white">
+       <h2 class="text-xl font-semibold mb-4">Broadcast</h2>
+       <p class="text-sm text-gray-400 mb-4">Send a message to every user who has opened the bot.</p>
+       <div class="max-w-md space-y-3">
+         <textarea id="broadcast-message" rows="4" placeholder="Type your announcement..." class="flex w-full rounded-md border px-3 py-2 text-base shadow-sm bg-gray-800 border-gray-700 text-green-400"></textarea>
+         <button onclick="sendBroadcast()" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium h-9 px-4 py-2 w-full bg-blue-600 hover:bg-blue-700 text-white">Send to All Users</button>
+         <p id="broadcast-status" class="text-sm"></p>
+       </div>
+     </div>
+
+     <!-- Onboarding Content (initially hidden) -->
+     <div id="onboarding-content" class="hidden bg-black p-8 text-white">
+       <h2 class="text-xl font-semibold mb-4">Onboarding Message</h2>
+       <p class="text-sm text-gray-400 mb-4">Shown on the "Join Our Channels" screen, after "Welcome, [name]!"</p>
+       <div class="max-w-md space-y-3">
+         <textarea id="onboarding-message" rows="3" class="flex w-full rounded-md border px-3 py-2 text-base shadow-sm bg-gray-800 border-gray-700 text-green-400"></textarea>
+         <button onclick="saveOnboarding()" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium h-9 px-4 py-2 w-full bg-blue-600 hover:bg-blue-700 text-white">Save</button>
+         <p id="onboarding-status" class="text-sm"></p>
+       </div>
+     </div>
+
+     <!-- Referral Audit Content (initially hidden) -->
+     <div id="referral-audit-content" class="hidden bg-black p-8 text-white">
+       <h2 class="text-xl font-semibold mb-4">Referral Audit</h2>
+       <p class="text-sm text-gray-400 mb-4">See who referred a user, and who they've referred.</p>
+       <div class="flex gap-2 mb-4 max-w-md">
+         <input type="text" id="audit-user-id" placeholder="Telegram user ID" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm bg-gray-800 border-gray-700 text-green-400">
+         <button onclick="lookupReferralAudit()" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium h-9 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white">Search</button>
+       </div>
+       <div id="referral-audit-result" class="max-w-md"></div>
+     </div>
+
+     <!-- User Ledger Content (initially hidden) -->
+     <div id="ledger-content" class="hidden bg-black p-8 text-white">
+       <h2 class="text-xl font-semibold mb-4">User Ledger</h2>
+       <p class="text-sm text-gray-400 mb-4">Full transaction history for a user.</p>
+       <div class="flex gap-2 mb-4 max-w-md">
+         <input type="text" id="ledger-user-id" placeholder="Telegram user ID" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm bg-gray-800 border-gray-700 text-green-400">
+         <button onclick="lookupLedger()" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium h-9 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white">Search</button>
+       </div>
+       <div id="ledger-result" class="max-w-md space-y-2"></div>
+     </div>
     </main>
    </div>
   </div>
@@ -2467,20 +2568,11 @@ video {
         }
     
     // Other menu functions
-    function showTasks() {
-      alert('Tasks section would be shown here');
-    }
-    
-    function showUsers() {
-      alert('Users section would be shown here');
-    }
-    
-    function showWithdrawals() {
-      alert('Withdrawals section would be shown here');
-    }
-    
+    function showDashboardStubRemoved() {}
     function hideAllPanels() {
-      ['dashboard-content', 'configuration-content', 'channels-content', 'links-content'].forEach((id) => {
+      ['dashboard-content', 'configuration-content', 'channels-content', 'links-content',
+       'tasks-content', 'users-content', 'withdrawals-content', 'moderation-content',
+       'broadcast-content', 'onboarding-content', 'referral-audit-content', 'ledger-content'].forEach((id) => {
         const el = document.getElementById(id);
         if (el) el.classList.add('hidden');
       });
@@ -2662,32 +2754,264 @@ video {
       loadLinksAdmin();
     }
 
-    function showSocialTasks() {
-      alert('Social Tasks section would be shown here');
+    function togglePanel(panelId, loaderFn) {
+      hideAllPanels();
+      document.getElementById(panelId).classList.remove('hidden');
+      if (event && event.currentTarget) {
+        event.currentTarget.classList.remove('bg-gray-800');
+        event.currentTarget.classList.add('bg-green-500');
+      }
+      loaderFn();
     }
-    
+
+    // ---- Tasks ----
+    function showTasks() { togglePanel('tasks-content', loadTasksAdmin); }
+    function showSocialTasks() { togglePanel('tasks-content', loadTasksAdmin); }
+
+    async function loadTasksAdmin() {
+      const listEl = document.getElementById('tasks-list-admin');
+      listEl.innerHTML = 'Loading...';
+      try {
+        const res = await adminFetch('/api/admin/tasks');
+        const data = await res.json();
+        const tasks = data.tasks || [];
+        if (tasks.length === 0) {
+          listEl.innerHTML = '<p class="text-sm text-gray-400">No tasks added yet.</p>';
+          return;
+        }
+        listEl.innerHTML = tasks.map((t) => `
+          <div class="flex items-center justify-between p-3 bg-gray-800 rounded-lg">
+            <span>${t.title} <span class="text-gray-400 text-sm">(${t.points}pts, ${t.platform}${t.active ? '' : ', inactive'})</span></span>
+            <div class="flex gap-2">
+              <button onclick="toggleTaskActive('${t.id}', ${!t.active})" class="text-blue-400 text-sm hover:underline">${t.active ? 'Deactivate' : 'Activate'}</button>
+              <button onclick="deleteTask('${t.id}')" class="text-red-400 text-sm hover:underline">Remove</button>
+            </div>
+          </div>
+        `).join('');
+      } catch (err) {
+        listEl.innerHTML = '<p class="text-sm text-red-400">Failed to load tasks.</p>';
+      }
+    }
+
+    async function addTask() {
+      const title = document.getElementById('new-task-title').value.trim();
+      const points = parseInt(document.getElementById('new-task-points').value, 10);
+      const platform = document.getElementById('new-task-platform').value;
+      const statusEl = document.getElementById('tasks-status');
+      if (!title || !points) {
+        statusEl.textContent = 'Please fill in title and points.';
+        statusEl.className = 'text-sm text-red-400';
+        return;
+      }
+      const res = await adminFetch('/api/admin/tasks', { method: 'POST', body: JSON.stringify({ title, points, platform }) });
+      if (res.ok) {
+        statusEl.textContent = 'Added!';
+        statusEl.className = 'text-sm text-green-400';
+        document.getElementById('new-task-title').value = '';
+        document.getElementById('new-task-points').value = '';
+        loadTasksAdmin();
+      } else {
+        const data = await res.json();
+        statusEl.textContent = data.error || 'Failed to add.';
+        statusEl.className = 'text-sm text-red-400';
+      }
+    }
+
+    async function toggleTaskActive(id, active) {
+      await adminFetch('/api/admin/tasks', { method: 'PUT', body: JSON.stringify({ id, active }) });
+      loadTasksAdmin();
+    }
+
+    async function deleteTask(id) {
+      if (!confirm('Remove this task?')) return;
+      await adminFetch('/api/admin/tasks', { method: 'DELETE', body: JSON.stringify({ id }) });
+      loadTasksAdmin();
+    }
+
+    // ---- Users ----
+    function showUsers() { togglePanel('users-content', () => {}); }
+
+    async function lookupUser() {
+      const userId = document.getElementById('lookup-user-id').value.trim();
+      const resultEl = document.getElementById('user-lookup-result');
+      if (!userId) return;
+      resultEl.innerHTML = 'Loading...';
+      const res = await adminFetch(`/api/admin/users?userId=${encodeURIComponent(userId)}`);
+      if (!res.ok) {
+        resultEl.innerHTML = '<p class="text-sm text-red-400">User not found.</p>';
+        return;
+      }
+      const { user } = await res.json();
+      resultEl.innerHTML = `
+        <div class="bg-gray-800 p-4 rounded-lg space-y-1 text-sm">
+          <p><span class="text-gray-400">Balance:</span> ${user.balance} pts</p>
+          <p><span class="text-gray-400">Referrals:</span> ${user.referral_count}</p>
+          <p><span class="text-gray-400">Referred by:</span> ${user.referred_by || '—'}</p>
+          <p><span class="text-gray-400">Tasks completed:</span> ${(user.tasks_completed || []).length}</p>
+          <p><span class="text-gray-400">Withdrawals made:</span> ${user.withdrawals_made}</p>
+          <p><span class="text-gray-400">Banned:</span> ${user.banned ? 'Yes' : 'No'}</p>
+        </div>`;
+    }
+
+    // ---- Withdrawals ----
+    function showWithdrawals() { togglePanel('withdrawals-content', loadWithdrawalsAdmin); }
+
+    async function loadWithdrawalsAdmin() {
+      const listEl = document.getElementById('withdrawals-list-admin');
+      listEl.innerHTML = 'Loading...';
+      const res = await adminFetch('/api/admin/withdrawals');
+      const data = await res.json();
+      const withdrawals = data.withdrawals || [];
+      if (withdrawals.length === 0) {
+        listEl.innerHTML = '<p class="text-sm text-gray-400">No pending withdrawals.</p>';
+        return;
+      }
+      listEl.innerHTML = withdrawals.map((w) => `
+        <div class="flex items-center justify-between p-3 bg-gray-800 rounded-lg">
+          <span>User ${w.user_id} <span class="text-gray-400 text-sm">— ${w.amount_points}pts via ${w.method}</span></span>
+          <div class="flex gap-2">
+            <button onclick="resolveWithdrawal('${w.id}', 'approve')" class="text-green-400 text-sm hover:underline">Approve</button>
+            <button onclick="resolveWithdrawal('${w.id}', 'reject')" class="text-red-400 text-sm hover:underline">Reject</button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    async function resolveWithdrawal(id, action) {
+      const res = await adminFetch('/api/admin/withdrawals', { method: 'POST', body: JSON.stringify({ id, action }) });
+      if (!res.ok) {
+        const data = await res.json();
+        alert(data.error || 'Failed to resolve.');
+      }
+      loadWithdrawalsAdmin();
+    }
+
+    // ---- Moderation ----
+    function showModeration() { togglePanel('moderation-content', () => {}); }
+
+    async function checkModeration() {
+      const userId = document.getElementById('mod-user-id').value.trim();
+      const resultEl = document.getElementById('moderation-result');
+      if (!userId) return;
+      resultEl.innerHTML = 'Loading...';
+      const res = await adminFetch(`/api/admin/moderation?userId=${encodeURIComponent(userId)}`);
+      if (!res.ok) {
+        resultEl.innerHTML = '<p class="text-sm text-red-400">User not found.</p>';
+        return;
+      }
+      const data = await res.json();
+      resultEl.innerHTML = `
+        <div class="bg-gray-800 p-4 rounded-lg space-y-3 text-sm">
+          <p>Status: ${data.banned ? 'Suspended' : 'Active'}</p>
+          <button onclick="setBanned('${userId}', ${!data.banned})" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium h-9 px-4 py-2 w-full ${data.banned ? 'bg-green-600 hover:bg-green-700' : 'bg-red-600 hover:bg-red-700'} text-white">
+            ${data.banned ? 'Unban User' : 'Ban User'}
+          </button>
+        </div>`;
+    }
+
+    async function setBanned(userId, banned) {
+      await adminFetch('/api/admin/moderation', { method: 'POST', body: JSON.stringify({ userId, banned }) });
+      checkModeration();
+    }
+
+    // ---- Broadcast ----
+    function showBroadcast() { togglePanel('broadcast-content', () => {}); }
+
+    async function sendBroadcast() {
+      const message = document.getElementById('broadcast-message').value.trim();
+      const statusEl = document.getElementById('broadcast-status');
+      if (!message) return;
+      if (!confirm('Send this message to every user?')) return;
+      statusEl.textContent = 'Sending...';
+      statusEl.className = 'text-sm text-gray-400';
+      const res = await adminFetch('/api/admin/broadcast', { method: 'POST', body: JSON.stringify({ message }) });
+      const data = await res.json();
+      if (res.ok) {
+        statusEl.textContent = `Sent to ${data.sent}/${data.total} users.`;
+        statusEl.className = 'text-sm text-green-400';
+      } else {
+        statusEl.textContent = data.error || 'Failed to send.';
+        statusEl.className = 'text-sm text-red-400';
+      }
+    }
+
+    // ---- Onboarding ----
+    function showOnboarding() { togglePanel('onboarding-content', loadOnboarding); }
+
+    async function loadOnboarding() {
+      const res = await fetch('/api/onboarding');
+      const data = await res.json();
+      document.getElementById('onboarding-message').value = data.message || '';
+    }
+
+    async function saveOnboarding() {
+      const message = document.getElementById('onboarding-message').value.trim();
+      const statusEl = document.getElementById('onboarding-status');
+      const res = await adminFetch('/api/onboarding', { method: 'POST', body: JSON.stringify({ message }) });
+      if (res.ok) {
+        statusEl.textContent = 'Saved!';
+        statusEl.className = 'text-sm text-green-400';
+      } else {
+        statusEl.textContent = 'Failed to save.';
+        statusEl.className = 'text-sm text-red-400';
+      }
+    }
+
+    // ---- Referral Audit ----
+    function showReferralAudit() { togglePanel('referral-audit-content', () => {}); }
+
+    async function lookupReferralAudit() {
+      const userId = document.getElementById('audit-user-id').value.trim();
+      const resultEl = document.getElementById('referral-audit-result');
+      if (!userId) return;
+      resultEl.innerHTML = 'Loading...';
+      const res = await adminFetch(`/api/admin/referral-audit?userId=${encodeURIComponent(userId)}`);
+      if (!res.ok) {
+        resultEl.innerHTML = '<p class="text-sm text-red-400">User not found.</p>';
+        return;
+      }
+      const data = await res.json();
+      const referredList = (data.referredUsers || []).map((u) => `
+        <li>${u.id} — ${u.balance}pts (started:${u.referral_stage.started}, tasks:${u.referral_stage.tasksDone}, withdrew:${u.referral_stage.withdrawn})</li>
+      `).join('') || '<li class="text-gray-400">None yet</li>';
+      resultEl.innerHTML = `
+        <div class="bg-gray-800 p-4 rounded-lg space-y-2 text-sm">
+          <p><span class="text-gray-400">Referred by:</span> ${data.referredBy || '—'}</p>
+          <p><span class="text-gray-400">Total referrals:</span> ${data.referralCount}</p>
+          <p class="text-gray-400">Referred users:</p>
+          <ul class="list-disc list-inside space-y-1">${referredList}</ul>
+        </div>`;
+    }
+
+    // ---- User Ledger ----
+    function showUserLedger() { togglePanel('ledger-content', () => {}); }
+
+    async function lookupLedger() {
+      const userId = document.getElementById('ledger-user-id').value.trim();
+      const resultEl = document.getElementById('ledger-result');
+      if (!userId) return;
+      resultEl.innerHTML = 'Loading...';
+      const res = await adminFetch(`/api/admin/ledger?userId=${encodeURIComponent(userId)}`);
+      if (!res.ok) {
+        resultEl.innerHTML = '<p class="text-sm text-red-400">Failed to load.</p>';
+        return;
+      }
+      const data = await res.json();
+      const txns = data.transactions || [];
+      if (txns.length === 0) {
+        resultEl.innerHTML = '<p class="text-sm text-gray-400">No transactions yet.</p>';
+        return;
+      }
+      resultEl.innerHTML = txns.map((t) => `
+        <div class="flex items-center justify-between p-3 bg-gray-800 rounded-lg text-sm">
+          <span>${t.note || t.type}</span>
+          <span class="${t.amount >= 0 ? 'text-green-400' : 'text-red-400'}">${t.amount >= 0 ? '+' : ''}${t.amount}</span>
+        </div>
+      `).join('');
+    }
+
     function showAds() {
       alert('Ads section would be shown here');
-    }
-    
-    function showModeration() {
-      alert('Moderation section would be shown here');
-    }
-    
-    function showBroadcast() {
-      alert('Broadcast section would be shown here');
-    }
-    
-    function showOnboarding() {
-      alert('Onboarding section would be shown here');
-    }
-    
-    function showReferralAudit() {
-      alert('Referral Audit section would be shown here');
-    }
-    
-    function showUserLedger() {
-      alert('User Ledger section would be shown here');
     }
     
     // Load configurations when page loads
