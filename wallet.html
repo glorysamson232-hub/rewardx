@@ -634,46 +634,46 @@ video {
   :root {
     --background: 0 0% 0%;
     --foreground: 0 0% 100%;
-    --card: 0 0% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 0 0% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
-    --secondary: 0 0% 14.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
-    --accent: 0 0% 14.9%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
+    --card: 220 15% 8%;
+    --card-foreground: 0 0% 100%;
+    --popover: 220 15% 8%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 217 91% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 45 93% 55%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 220 15% 16%;
+    --muted-foreground: 0 0% 65%;
+    --accent: 45 93% 55%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
-    --ring: 0 0% 83.1%;
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 217 91% 55%;
     --radius: 0.5rem;
   }
 
   .dark {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 0%;
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 0%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 0%;
-    --primary: 0 0% 0%;
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+    --card: 220 15% 9%;
+    --card-foreground: 0 0% 100%;
+    --popover: 220 15% 9%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 217 91% 60%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 0 0% 96.1%;
+    --secondary: 45 93% 55%;
     --secondary-foreground: 0 0% 9%;
-    --muted: 0 0% 96.1%;
-    --muted-foreground: 0 0% 45.1%;
-    --accent: 0 0% 96.1%;
+    --muted: 220 15% 16%;
+    --muted-foreground: 0 0% 65%;
+    --accent: 45 93% 55%;
     --accent-foreground: 0 0% 9%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 89.8%;
-    --input: 0 0% 89.8%;
-    --ring: 0 0% 0%;
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 217 91% 60%;
   }
   * {
   border-color: hsl(var(--border));
@@ -2188,32 +2188,29 @@ video {
       <div class="rounded-xl border bg-card text-card-foreground shadow">
        <div class="flex flex-col space-y-1.5 p-6">
         <div class="font-semibold leading-none tracking-tight">
-         Binance Account Setup
+         USDT Wallet Setup
         </div>
         <div class="text-sm text-muted-foreground">
-         Add your binance details to receive withdrawals
+         Add your USDT wallet address to receive withdrawals
         </div>
        </div>
        <div class="p-6 pt-0 space-y-6">
         <div class="space-y-2">
-         <label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70" for="binance-id">Binance ID</label>
-         <input class="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm" id="binance-id" placeholder="Enter binance id">
-        </div>
-        <div class="space-y-2">
-         <label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70" for="email">Email address</label>
-         <input type="email" class="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm" id="email" placeholder="Enter email address">
+         <label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70" for="wallet-address">USDT Wallet Address</label>
+         <input class="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm" id="wallet-address" placeholder="Enter your USDT (TRC20) wallet address">
         </div>
        </div>
        <div class="flex p-6 pt-0 flex-col items-stretch gap-4">
-        <button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground shadow hover:bg-primary/90 px-4 py-2 w-full h-12 text-lg">
+        <button id="save-wallet-btn" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary text-primary-foreground shadow hover:bg-primary/90 px-4 py-2 w-full h-12 text-lg">
          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-save mr-2 h-5 w-5">
           <path d="M15.2 3a2 2 0 0 1 1.4.6l3.8 3.8a2 2 0 0 1 .6 1.4V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"></path>
           <path d="M17 21v-7a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v7"></path>
           <path d="M7 3v4a1 1 0 0 0 1 1h7"></path>
-         </svg>Save Binance Details</button>
+         </svg>Save Wallet Address</button>
+        <p id="wallet-status" class="text-sm text-center"></p>
         <div class="text-center text-sm text-muted-foreground space-y-1 border rounded-lg p-2">
-         <p>Binance details can only be added once.</p>
-         <p>To modify: 2,000 points fee</p>
+         <p>First time setting your wallet is free.</p>
+         <p>Changing it afterward costs 2,000 points.</p>
         </div>
        </div>
       </div>
@@ -2323,7 +2320,54 @@ video {
       console.log('No user data found in localStorage');
       window.location.href = 'index.html';
     }
+
+    // Load and save the USDT wallet address.
+    const walletInput = document.getElementById('wallet-address');
+    const statusEl = document.getElementById('wallet-status');
+    const saveBtn = document.getElementById('save-wallet-btn');
+
+    fetch(`/api/wallet?userId=${encodeURIComponent(getUserId())}`)
+      .then((r) => r.json())
+      .then((data) => {
+        if (data.walletAddress && walletInput) walletInput.value = data.walletAddress;
+      })
+      .catch((err) => console.error('Error loading wallet:', err));
+
+    if (saveBtn) {
+      saveBtn.addEventListener('click', async () => {
+        const walletAddress = walletInput.value.trim();
+        if (!walletAddress) {
+          statusEl.textContent = 'Please enter a wallet address.';
+          statusEl.className = 'text-sm text-center text-red-500';
+          return;
+        }
+        saveBtn.disabled = true;
+        try {
+          const res = await fetch('/api/wallet', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ userId: getUserId(), walletAddress }),
+          });
+          const data = await res.json();
+          if (res.ok) {
+            statusEl.textContent = data.feeCharged
+              ? `Saved — ${data.feeCharged} points fee applied.`
+              : 'Wallet address saved!';
+            statusEl.className = 'text-sm text-center text-green-500';
+          } else {
+            statusEl.textContent = data.error || 'Failed to save.';
+            statusEl.className = 'text-sm text-center text-red-500';
+          }
+        } catch (err) {
+          statusEl.textContent = 'Network error.';
+          statusEl.className = 'text-sm text-center text-red-500';
+        } finally {
+          saveBtn.disabled = false;
+        }
+      });
+    }
   });
 </script>
+<script src="common.js"></script>
  </body>
 </html>

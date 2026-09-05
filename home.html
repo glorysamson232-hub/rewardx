@@ -634,46 +634,46 @@ video {
   :root {
     --background: 0 0% 0%;
     --foreground: 0 0% 100%;
-    --card: 0 0% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 0 0% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
-    --secondary: 0 0% 14.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
-    --accent: 0 0% 14.9%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
+    --card: 220 15% 8%;
+    --card-foreground: 0 0% 100%;
+    --popover: 220 15% 8%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 217 91% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 45 93% 55%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 220 15% 16%;
+    --muted-foreground: 0 0% 65%;
+    --accent: 45 93% 55%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
-    --ring: 0 0% 83.1%;
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 217 91% 55%;
     --radius: 0.5rem;
   }
 
   .dark {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 0%;
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 0%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 0%;
-    --primary: 0 0% 0%;
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+    --card: 220 15% 9%;
+    --card-foreground: 0 0% 100%;
+    --popover: 220 15% 9%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 217 91% 60%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 0 0% 96.1%;
+    --secondary: 45 93% 55%;
     --secondary-foreground: 0 0% 9%;
-    --muted: 0 0% 96.1%;
-    --muted-foreground: 0 0% 45.1%;
-    --accent: 0 0% 96.1%;
+    --muted: 220 15% 16%;
+    --muted-foreground: 0 0% 65%;
+    --accent: 45 93% 55%;
     --accent-foreground: 0 0% 9%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 89.8%;
-    --input: 0 0% 89.8%;
-    --ring: 0 0% 0%;
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 217 91% 60%;
   }
   * {
   border-color: hsl(var(--border));
@@ -2188,8 +2188,8 @@ video {
   <div class="text-center p-4">
     <p class="text-base">Total Balance</p>
     <p class="text-4xl font-bold my-1" id="balance-display">0</p>
-    <p class="text-xs opacity-90">0 friends invited • Rank #648</p>
-    <p class="text-xs opacity-90 mt-1">Conversion rate: 1 point = 20 Ton</p>
+    <p class="text-xs opacity-90" id="referral-stats">Loading...</p>
+    <p class="text-xs opacity-90 mt-1">Conversion rate: 5000 points = $1</p>
   </div>
 </div>
       <div>
@@ -2199,14 +2199,6 @@ video {
         <a class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground px-4 py-2 h-14 text-base" href="advertise.html" data-discover="true">Advertise</a>
         <a class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground px-4 py-2 h-14 text-base" href="wallet.html" data-discover="true">Wallet</a>
         <a class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground px-4 py-2 h-14 text-base" href="/history.html" data-discover="true">History</a>
-       </div>
-      </div>
-      <div>
-       <h2 class="text-lg font-semibold mb-2">RewardX Leaderboard Rank</h2>
-       <div class="flex justify-center items-center p-8">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-loader-circle h-8 w-8 animate-spin text-primary">
-         <path d="M21 12a9 9 0 1 1-6.219-8.56"></path>
-        </svg>
        </div>
       </div>
      </div>
@@ -2319,6 +2311,18 @@ video {
     initializeBalance();
     initializeReferralSystem();
     updateUserProfile();
+
+    // Real referral count, replacing the old fake "Rank #648" text.
+    fetch(`/api/user-balance?userId=${encodeURIComponent(getUserId())}`)
+      .then((r) => r.json())
+      .then((data) => {
+        const statsEl = document.getElementById('referral-stats');
+        if (statsEl) statsEl.textContent = `${data.referral_count || 0} friends invited`;
+      })
+      .catch(() => {
+        const statsEl = document.getElementById('referral-stats');
+        if (statsEl) statsEl.textContent = '0 friends invited';
+      });
 });
 </script>
 <script src="common.js"></script>

@@ -567,57 +567,47 @@ video {
   display: none;
 }
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 0%;
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
-    --primary: 240 5.9% 10%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+    --card: 220 15% 8%;
+    --card-foreground: 0 0% 100%;
+    --popover: 220 15% 8%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 217 91% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 45 93% 55%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 220 15% 16%;
+    --muted-foreground: 0 0% 65%;
+    --accent: 45 93% 55%;
+    --accent-foreground: 0 0% 9%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 240 10% 3.9%;
-    --chart-1: 12 76% 61%;
-    --chart-2: 173 58% 39%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 217 91% 55%;
     --radius: 0.5rem;
   }
   .dark {
     --background: 0 0% 0%;
     --foreground: 0 0% 100%;
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 240 5.9% 10%;
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
-    --accent: 240 3.7% 15.9%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
+    --card: 220 15% 9%;
+    --card-foreground: 0 0% 100%;
+    --popover: 220 15% 9%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 45 93% 55%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 220 15% 16%;
+    --muted-foreground: 0 0% 65%;
+    --accent: 45 93% 55%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 240 4.9% 83.9%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 217 91% 60%;
   }
   * {
   border-color: hsl(var(--border));
@@ -1239,7 +1229,7 @@ video {
   --tw-text-opacity: 1;
   color: rgb(156 163 175 / var(--tw-text-opacity, 1));
 }
-.text-green-500 {
+.text-yellow-500 {
   --tw-text-opacity: 1;
   color: rgb(34 197 94 / var(--tw-text-opacity, 1));
 }
@@ -1282,7 +1272,7 @@ video {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity, 1));
 }
-.text-green-400 {
+.text-yellow-400 {
   --tw-text-opacity: 1;
   color: rgb(74 222 128 / var(--tw-text-opacity, 1));
 }
@@ -1939,14 +1929,6 @@ video {
         </svg>
         <span class="text-white text-sm">Social Tasks</span>
        </div>
-       <div class="flex flex-col items-center justify-center gap-2 rounded-lg p-4 text-center bg-gray-800 cursor-pointer" onclick="showAds()">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-magnet text-red-500">
-         <path d="m6 15-4-4 6.75-6.77a7.79 7.79 0 0 1 11 11L13 22l-4-4 6.39-6.36a2.14 2.14 0 0 0-3-3L6 15"></path>
-         <path d="m5 8 4 4"></path>
-         <path d="m12 15 4 4"></path>
-        </svg>
-        <span class="text-white text-sm">Ads</span>
-       </div>
        <div class="flex flex-col items-center justify-center gap-2 rounded-lg p-4 text-center bg-gray-800 cursor-pointer" onclick="showModeration()">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield text-gray-400">
          <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
@@ -1961,7 +1943,7 @@ video {
         <span class="text-white text-sm">Broadcast</span>
        </div>
        <div class="flex flex-col items-center justify-center gap-2 rounded-lg p-4 text-center bg-gray-800 cursor-pointer" onclick="showOnboarding()">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-big text-green-500">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-big text-yellow-500">
          <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
          <path d="m9 11 3 3L22 4"></path>
         </svg>
@@ -1991,23 +1973,23 @@ video {
         <div class="space-y-4 max-w-2xl">
           <div>
             <label class="text-sm font-medium leading-none">Daily Claims Limit:</label>
-            <input type="number" id="daily-claims-limit" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 bg-gray-800 border-gray-700 text-green-400" value="5">
+            <input type="number" id="daily-claims-limit" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 bg-gray-800 border-gray-700 text-yellow-400" value="5">
           </div>
           <div>
             <label class="text-sm font-medium leading-none">Minimum Claim Amount:</label>
-            <input type="number" id="min-claim-amount" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 bg-gray-800 border-gray-700 text-green-400" value="10">
+            <input type="number" id="min-claim-amount" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 bg-gray-800 border-gray-700 text-yellow-400" value="10">
           </div>
           <div>
             <label class="text-sm font-medium leading-none">Maximum Claim Amount:</label>
-            <input type="number" id="max-claim-amount" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 bg-gray-800 border-gray-700 text-green-400" value="100">
+            <input type="number" id="max-claim-amount" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 bg-gray-800 border-gray-700 text-yellow-400" value="100">
           </div>
           <div>
             <label class="text-sm font-medium leading-none">Bonus Claims per Friends:</label>
-            <input type="number" id="bonus-claims-per-friend" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 bg-gray-800 border-gray-700 text-green-400" value="1">
+            <input type="number" id="bonus-claims-per-friend" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 bg-gray-800 border-gray-700 text-yellow-400" value="1">
           </div>
           <div>
             <label class="text-sm font-medium leading-none">Friends Required for Bonus:</label>
-            <input type="number" id="friends-required-for-bonus" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 bg-gray-800 border-gray-700 text-green-400" value="5">
+            <input type="number" id="friends-required-for-bonus" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 bg-gray-800 border-gray-700 text-yellow-400" value="5">
           </div>
           <button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 shadow h-9 bg-green-500 text-black border border-black hover:bg-green-600 px-4 py-2" onclick="saveClaimsConfig()">
             Save Claims Config
@@ -2021,31 +2003,31 @@ video {
         <div class="space-y-4 max-w-2xl">
           <div>
             <label class="text-sm font-medium leading-none">Minimum Withdrawal:</label>
-            <input type="number" id="min-withdrawal" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 bg-gray-800 border-gray-700 text-green-400" value="1500">
+            <input type="number" id="min-withdrawal" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 bg-gray-800 border-gray-700 text-yellow-400" value="1500">
           </div>
           <div>
             <label class="text-sm font-medium leading-none">Maximum Withdrawal:</label>
-            <input type="number" id="max-withdrawal" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 bg-gray-800 border-gray-700 text-green-400" value="2500">
+            <input type="number" id="max-withdrawal" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 bg-gray-800 border-gray-700 text-yellow-400" value="2500">
           </div>
           <div>
             <label class="text-sm font-medium leading-none">Withdrawal Fee (%):</label>
-            <input type="number" id="withdrawal-fee" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 bg-gray-800 border-gray-700 text-green-400" value="5">
+            <input type="number" id="withdrawal-fee" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 bg-gray-800 border-gray-700 text-yellow-400" value="5">
           </div>
           <div>
             <label class="text-sm font-medium leading-none">Bank Edit Fee (Points):</label>
-            <input type="number" id="bank-edit-fee" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 bg-gray-800 border-gray-700 text-green-400" value="10">
+            <input type="number" id="bank-edit-fee" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 bg-gray-800 border-gray-700 text-yellow-400" value="10">
           </div>
           <div>
             <label class="text-sm font-medium leading-none">Min Successful Referrals To Withdraw:</label>
-            <input type="number" id="min-referrals-to-withdraw" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 bg-gray-800 border-gray-700 text-green-400" value="5">
+            <input type="number" id="min-referrals-to-withdraw" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 bg-gray-800 border-gray-700 text-yellow-400" value="5">
           </div>
           <div>
             <label class="text-sm font-medium leading-none">Currency Symbol:</label>
-            <input type="text" id="currency-symbol" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 bg-gray-800 border-gray-700 text-green-400" value="$">
+            <input type="text" id="currency-symbol" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 bg-gray-800 border-gray-700 text-yellow-400" value="$">
           </div>
           <div>
             <label class="text-sm font-medium leading-none">Point Currency Rate (1 point = ?):</label>
-            <input type="number" step="0.01" id="point-currency-rate" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 bg-gray-800 border-gray-700 text-green-400" value="0.0002">
+            <input type="number" step="0.01" id="point-currency-rate" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 bg-gray-800 border-gray-700 text-yellow-400" value="0.0002">
           </div>
           <button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 shadow h-9 bg-green-500 text-black border border-black hover:bg-green-600 px-4 py-2" onclick="saveWithdrawalConfig()">
             Save Withdraw Config
@@ -2059,19 +2041,19 @@ video {
         <div class="space-y-4 max-w-2xl">
           <div>
             <label class="text-sm font-medium leading-none">Channel Join Points:</label>
-            <input type="number" id="channel-join-points" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 bg-gray-800 border-gray-700 text-green-400" value="50">
+            <input type="number" id="channel-join-points" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 bg-gray-800 border-gray-700 text-yellow-400" value="50">
           </div>
           <div>
             <label class="text-sm font-medium leading-none">Group Join Points:</label>
-            <input type="number" id="group-join-points" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 bg-gray-800 border-gray-700 text-green-400" value="30">
+            <input type="number" id="group-join-points" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 bg-gray-800 border-gray-700 text-yellow-400" value="30">
           </div>
           <div>
             <label class="text-sm font-medium leading-none">Friend Invite Points:</label>
-            <input type="number" id="friend-invite-points" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 bg-gray-800 border-gray-700 text-green-400" value="100">
+            <input type="number" id="friend-invite-points" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 bg-gray-800 border-gray-700 text-yellow-400" value="100">
           </div>
           <div>
             <label class="text-sm font-medium leading-none">Daily Task Limit:</label>
-            <input type="number" id="daily-task-limit" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 bg-gray-800 border-gray-700 text-green-400" value="10">
+            <input type="number" id="daily-task-limit" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 bg-gray-800 border-gray-700 text-yellow-400" value="10">
           </div>
           <button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 shadow h-9 bg-green-500 text-black border border-black hover:bg-green-600 px-4 py-2" onclick="savePointsConfig()">
             Save Points Config
@@ -2085,7 +2067,7 @@ video {
         <div class="space-y-4 max-w-2xl">
           <div>
             <label class="text-sm font-medium leading-none">Support Username:</label>
-            <input type="text" id="support-username" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 bg-gray-800 border-gray-700 text-green-400" value="@SupportAdmin">
+            <input type="text" id="support-username" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 bg-gray-800 border-gray-700 text-yellow-400" value="@SupportAdmin">
           </div>
           
           <h3 class="text-lg font-medium mt-6">Support Admins (Usernames & Descriptions)</h3>
@@ -2093,47 +2075,47 @@ video {
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <label class="text-sm font-medium leading-none">Admin 1 Username:</label>
-              <input type="text" id="admin1-username" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 bg-gray-800 border-gray-700 text-green-400" value="@Admin1">
+              <input type="text" id="admin1-username" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 bg-gray-800 border-gray-700 text-yellow-400" value="@Admin1">
             </div>
             <div>
               <label class="text-sm font-medium leading-none">Admin 1 Description:</label>
-              <input type="text" id="admin1-description" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 bg-gray-800 border-gray-700 text-green-400" placeholder="e.g. Withdrawal">
+              <input type="text" id="admin1-description" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 bg-gray-800 border-gray-700 text-yellow-400" placeholder="e.g. Withdrawal">
             </div>
             
             <div>
               <label class="text-sm font-medium leading-none">Admin 2 Username:</label>
-              <input type="text" id="admin2-username" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 bg-gray-800 border-gray-700 text-green-400" value="@Admin2">
+              <input type="text" id="admin2-username" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 bg-gray-800 border-gray-700 text-yellow-400" value="@Admin2">
             </div>
             <div>
               <label class="text-sm font-medium leading-none">Admin 2 Description:</label>
-              <input type="text" id="admin2-description" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 bg-gray-800 border-gray-700 text-green-400" placeholder="e.g. Tasks">
+              <input type="text" id="admin2-description" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 bg-gray-800 border-gray-700 text-yellow-400" placeholder="e.g. Tasks">
             </div>
             
             <div>
               <label class="text-sm font-medium leading-none">Admin 3 Username:</label>
-              <input type="text" id="admin3-username" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 bg-gray-800 border-gray-700 text-green-400" value="@Admin3">
+              <input type="text" id="admin3-username" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 bg-gray-800 border-gray-700 text-yellow-400" value="@Admin3">
             </div>
             <div>
               <label class="text-sm font-medium leading-none">Admin 3 Description:</label>
-              <input type="text" id="admin3-description" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 bg-gray-800 border-gray-700 text-green-400" placeholder="e.g. General Support">
+              <input type="text" id="admin3-description" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 bg-gray-800 border-gray-700 text-yellow-400" placeholder="e.g. General Support">
             </div>
             
             <div>
               <label class="text-sm font-medium leading-none">Admin 4 Username:</label>
-              <input type="text" id="admin4-username" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 bg-gray-800 border-gray-700 text-green-400" value="@Admin4">
+              <input type="text" id="admin4-username" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 bg-gray-800 border-gray-700 text-yellow-400" value="@Admin4">
             </div>
             <div>
               <label class="text-sm font-medium leading-none">Admin 4 Description:</label>
-              <input type="text" id="admin4-description" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 bg-gray-800 border-gray-700 text-green-400" placeholder="e.g. General Support">
+              <input type="text" id="admin4-description" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 bg-gray-800 border-gray-700 text-yellow-400" placeholder="e.g. General Support">
             </div>
             
             <div>
               <label class="text-sm font-medium leading-none">Admin 5 Username:</label>
-              <input type="text" id="admin5-username" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 bg-gray-800 border-gray-700 text-green-400" value="@Admin5">
+              <input type="text" id="admin5-username" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 bg-gray-800 border-gray-700 text-yellow-400" value="@Admin5">
             </div>
             <div>
               <label class="text-sm font-medium leading-none">Admin 5 Description:</label>
-              <input type="text" id="admin5-description" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 bg-gray-800 border-gray-700 text-green-400" placeholder="e.g. General Support">
+              <input type="text" id="admin5-description" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 bg-gray-800 border-gray-700 text-yellow-400" placeholder="e.g. General Support">
             </div>
           </div>
           
@@ -2149,7 +2131,7 @@ video {
         <div class="space-y-4 max-w-2xl">
           <div>
             <label class="text-sm font-medium leading-none">App Name:</label>
-            <input type="text" id="app-name" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 bg-gray-800 border-gray-700 text-green-400" value="RewardX">
+            <input type="text" id="app-name" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 bg-gray-800 border-gray-700 text-yellow-400" value="RewardX">
           </div>
           <button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 shadow h-9 bg-green-500 text-black border border-black hover:bg-green-600 px-4 py-2" onclick="saveAppConfig()">
             Save App Config
@@ -2161,27 +2143,27 @@ video {
       <div class="mb-8">
             <h2 class="text-xl font-semibold mb-4">Monetag Ads</h2>
             <div class="space-y-4 max-w-2xl">
-                <p class="text-green-400">Monetag is now integrated via header SDK. No extra settings are required here.</p>
+                <p class="text-yellow-400">Monetag is now integrated via header SDK. No extra settings are required here.</p>
                 <div class="bg-gray-900 p-4 rounded-md">
                     <div class="flex justify-between items-center mb-2">
                         <span class="text-sm">Today Clicks</span>
-                        <span class="text-green-400 font-bold">0</span>
+                        <span class="text-yellow-400 font-bold">0</span>
                     </div>
                     <div class="mb-3">
                         <label class="text-sm font-medium leading-none">Fixed Reward Points (per completed ad):</label>
-                        <input type="number" id="reward-points-per-ad" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 bg-gray-800 border-gray-700 text-green-400" value="">
+                        <input type="number" id="reward-points-per-ad" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 bg-gray-800 border-gray-700 text-yellow-400" value="">
                     </div>
                     <div class="mb-3">
                         <label class="text-sm font-medium leading-none">Zone ID/ SDK ID (numbers):</label>
-                        <input type="text" id="zone-id" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 bg-gray-800 border-gray-700 text-green-400" value="">
+                        <input type="text" id="zone-id" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 bg-gray-800 border-gray-700 text-yellow-400" value="">
                     </div>
                     <div class="mb-3">
                         <label class="text-sm font-medium leading-none">Mini App ID(optional):</label>
-                        <input type="text" id="mini-app-id" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 bg-gray-800 border-gray-700 text-green-400" value="">
+                        <input type="text" id="mini-app-id" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 bg-gray-800 border-gray-700 text-yellow-400" value="">
                     </div>
                     <div class="mb-3">
                         <label class="text-sm font-medium leading-none">SDK Script Snippet(paste full &lt;script&gt; tag):</label>
-                        <textarea id="sdk-script" class="flex min-h-[60px] w-full rounded-md border px-3 py-2 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 bg-gray-800 border-gray-700 text-green-400" rows="3"></textarea>
+                        <textarea id="sdk-script" class="flex min-h-[60px] w-full rounded-md border px-3 py-2 text-base shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 bg-gray-800 border-gray-700 text-yellow-400" rows="3"></textarea>
                     </div>
                     <p class="text-sm text-gray-400 mt-2">This code will be injected into the app header automatically.</p>
                 </div>
@@ -2198,19 +2180,19 @@ video {
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
         <div class="bg-gray-800 p-4 rounded-lg">
           <p class="text-gray-400">Total Users</p>
-          <p class="text-2xl font-bold text-green-400">1,234</p>
+          <p class="text-2xl font-bold text-yellow-400">1,234</p>
         </div>
         <div class="bg-gray-800 p-4 rounded-lg">
           <p class="text-gray-400">Active Today</p>
-          <p class="text-2xl font-bold text-green-400">567</p>
+          <p class="text-2xl font-bold text-yellow-400">567</p>
         </div>
         <div class="bg-gray-800 p-4 rounded-lg">
           <p class="text-gray-400">Total Withdrawals</p>
-          <p class="text-2xl font-bold text-green-400">$12,345</p>
+          <p class="text-2xl font-bold text-yellow-400">$12,345</p>
         </div>
         <div class="bg-gray-800 p-4 rounded-lg">
           <p class="text-gray-400">Pending Withdrawals</p>
-          <p class="text-2xl font-bold text-green-400">$1,234</p>
+          <p class="text-2xl font-bold text-yellow-400">$1,234</p>
         </div>
       </div>
      </div>
@@ -2224,15 +2206,15 @@ video {
          <h3 class="font-semibold">Add Channel or Group</h3>
          <div>
            <label class="text-sm font-medium leading-none">Display Name:</label>
-           <input type="text" id="new-channel-label" placeholder="e.g. RewardX Announcements" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm mt-2 bg-gray-800 border-gray-700 text-green-400">
+           <input type="text" id="new-channel-label" placeholder="e.g. RewardX Announcements" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm mt-2 bg-gray-800 border-gray-700 text-yellow-400">
          </div>
          <div>
            <label class="text-sm font-medium leading-none">Telegram @username:</label>
-           <input type="text" id="new-channel-username" placeholder="e.g. @rewardx" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm mt-2 bg-gray-800 border-gray-700 text-green-400">
+           <input type="text" id="new-channel-username" placeholder="e.g. @rewardx" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm mt-2 bg-gray-800 border-gray-700 text-yellow-400">
          </div>
          <div>
            <label class="text-sm font-medium leading-none">Type:</label>
-           <select id="new-channel-type" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm mt-2 bg-gray-800 border-gray-700 text-green-400">
+           <select id="new-channel-type" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm mt-2 bg-gray-800 border-gray-700 text-yellow-400">
              <option value="channel">Channel</option>
              <option value="group">Group</option>
            </select>
@@ -2251,15 +2233,15 @@ video {
          <h3 class="font-semibold">Add Link</h3>
          <div>
            <label class="text-sm font-medium leading-none">Label:</label>
-           <input type="text" id="new-link-label" placeholder="e.g. Support Chat" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm mt-2 bg-gray-800 border-gray-700 text-green-400">
+           <input type="text" id="new-link-label" placeholder="e.g. Support Chat" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm mt-2 bg-gray-800 border-gray-700 text-yellow-400">
          </div>
          <div>
            <label class="text-sm font-medium leading-none">URL:</label>
-           <input type="text" id="new-link-url" placeholder="https://t.me/yourhandle" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm mt-2 bg-gray-800 border-gray-700 text-green-400">
+           <input type="text" id="new-link-url" placeholder="https://t.me/yourhandle" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm mt-2 bg-gray-800 border-gray-700 text-yellow-400">
          </div>
          <div>
            <label class="text-sm font-medium leading-none">Key (optional):</label>
-           <input type="text" id="new-link-key" placeholder="support_chat" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm mt-2 bg-gray-800 border-gray-700 text-green-400">
+           <input type="text" id="new-link-key" placeholder="support_chat" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm mt-2 bg-gray-800 border-gray-700 text-yellow-400">
          </div>
          <button onclick="addLink()" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium h-9 px-4 py-2 w-full bg-blue-600 hover:bg-blue-700 text-white">Add</button>
          <p id="links-status" class="text-sm"></p>
@@ -2275,20 +2257,24 @@ video {
          <h3 class="font-semibold">Add Task</h3>
          <div>
            <label class="text-sm font-medium leading-none">Title:</label>
-           <input type="text" id="new-task-title" placeholder="e.g. Follow us on TikTok" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm mt-2 bg-gray-800 border-gray-700 text-green-400">
+           <input type="text" id="new-task-title" placeholder="e.g. Follow us on TikTok" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm mt-2 bg-gray-800 border-gray-700 text-yellow-400">
          </div>
          <div>
            <label class="text-sm font-medium leading-none">Points:</label>
-           <input type="number" id="new-task-points" placeholder="50" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm mt-2 bg-gray-800 border-gray-700 text-green-400">
+           <input type="number" id="new-task-points" placeholder="50" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm mt-2 bg-gray-800 border-gray-700 text-yellow-400">
          </div>
          <div>
            <label class="text-sm font-medium leading-none">Platform:</label>
-           <select id="new-task-platform" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm mt-2 bg-gray-800 border-gray-700 text-green-400">
+           <select id="new-task-platform" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm mt-2 bg-gray-800 border-gray-700 text-yellow-400">
              <option value="general">General</option>
              <option value="facebook">Facebook</option>
              <option value="tiktok">TikTok</option>
              <option value="website">Website</option>
            </select>
+         </div>
+         <div>
+           <label class="text-sm font-medium leading-none">Link (optional — where "Join" sends users):</label>
+           <input type="text" id="new-task-url" placeholder="https://..." class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm mt-2 bg-gray-800 border-gray-700 text-yellow-400">
          </div>
          <button onclick="addTask()" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium h-9 px-4 py-2 w-full bg-blue-600 hover:bg-blue-700 text-white">Add</button>
          <p id="tasks-status" class="text-sm"></p>
@@ -2300,7 +2286,7 @@ video {
        <h2 class="text-xl font-semibold mb-4">Users</h2>
        <p class="text-sm text-gray-400 mb-4">Look up a user by their Telegram ID.</p>
        <div class="flex gap-2 mb-4 max-w-md">
-         <input type="text" id="lookup-user-id" placeholder="Telegram user ID" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm bg-gray-800 border-gray-700 text-green-400">
+         <input type="text" id="lookup-user-id" placeholder="Telegram user ID" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm bg-gray-800 border-gray-700 text-yellow-400">
          <button onclick="lookupUser()" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium h-9 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white">Search</button>
        </div>
        <div id="user-lookup-result" class="max-w-md"></div>
@@ -2317,7 +2303,7 @@ video {
        <h2 class="text-xl font-semibold mb-4">Moderation</h2>
        <p class="text-sm text-gray-400 mb-4">Suspend a user's account — blocks them from earning or withdrawing.</p>
        <div class="flex gap-2 mb-4 max-w-md">
-         <input type="text" id="mod-user-id" placeholder="Telegram user ID" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm bg-gray-800 border-gray-700 text-green-400">
+         <input type="text" id="mod-user-id" placeholder="Telegram user ID" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm bg-gray-800 border-gray-700 text-yellow-400">
          <button onclick="checkModeration()" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium h-9 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white">Search</button>
        </div>
        <div id="moderation-result" class="max-w-md"></div>
@@ -2328,7 +2314,7 @@ video {
        <h2 class="text-xl font-semibold mb-4">Broadcast</h2>
        <p class="text-sm text-gray-400 mb-4">Send a message to every user who has opened the bot.</p>
        <div class="max-w-md space-y-3">
-         <textarea id="broadcast-message" rows="4" placeholder="Type your announcement..." class="flex w-full rounded-md border px-3 py-2 text-base shadow-sm bg-gray-800 border-gray-700 text-green-400"></textarea>
+         <textarea id="broadcast-message" rows="4" placeholder="Type your announcement..." class="flex w-full rounded-md border px-3 py-2 text-base shadow-sm bg-gray-800 border-gray-700 text-yellow-400"></textarea>
          <button onclick="sendBroadcast()" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium h-9 px-4 py-2 w-full bg-blue-600 hover:bg-blue-700 text-white">Send to All Users</button>
          <p id="broadcast-status" class="text-sm"></p>
        </div>
@@ -2339,7 +2325,7 @@ video {
        <h2 class="text-xl font-semibold mb-4">Onboarding Message</h2>
        <p class="text-sm text-gray-400 mb-4">Shown on the "Join Our Channels" screen, after "Welcome, [name]!"</p>
        <div class="max-w-md space-y-3">
-         <textarea id="onboarding-message" rows="3" class="flex w-full rounded-md border px-3 py-2 text-base shadow-sm bg-gray-800 border-gray-700 text-green-400"></textarea>
+         <textarea id="onboarding-message" rows="3" class="flex w-full rounded-md border px-3 py-2 text-base shadow-sm bg-gray-800 border-gray-700 text-yellow-400"></textarea>
          <button onclick="saveOnboarding()" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium h-9 px-4 py-2 w-full bg-blue-600 hover:bg-blue-700 text-white">Save</button>
          <p id="onboarding-status" class="text-sm"></p>
        </div>
@@ -2350,7 +2336,7 @@ video {
        <h2 class="text-xl font-semibold mb-4">Referral Audit</h2>
        <p class="text-sm text-gray-400 mb-4">See who referred a user, and who they've referred.</p>
        <div class="flex gap-2 mb-4 max-w-md">
-         <input type="text" id="audit-user-id" placeholder="Telegram user ID" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm bg-gray-800 border-gray-700 text-green-400">
+         <input type="text" id="audit-user-id" placeholder="Telegram user ID" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm bg-gray-800 border-gray-700 text-yellow-400">
          <button onclick="lookupReferralAudit()" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium h-9 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white">Search</button>
        </div>
        <div id="referral-audit-result" class="max-w-md"></div>
@@ -2361,7 +2347,7 @@ video {
        <h2 class="text-xl font-semibold mb-4">User Ledger</h2>
        <p class="text-sm text-gray-400 mb-4">Full transaction history for a user.</p>
        <div class="flex gap-2 mb-4 max-w-md">
-         <input type="text" id="ledger-user-id" placeholder="Telegram user ID" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm bg-gray-800 border-gray-700 text-green-400">
+         <input type="text" id="ledger-user-id" placeholder="Telegram user ID" class="flex h-9 w-full rounded-md border px-3 py-1 text-base shadow-sm bg-gray-800 border-gray-700 text-yellow-400">
          <button onclick="lookupLedger()" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium h-9 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white">Search</button>
        </div>
        <div id="ledger-result" class="max-w-md space-y-2"></div>
@@ -2671,7 +2657,7 @@ video {
         });
         if (res.ok) {
           statusEl.textContent = 'Added!';
-          statusEl.className = 'text-sm text-green-400';
+          statusEl.className = 'text-sm text-yellow-400';
           document.getElementById('new-channel-label').value = '';
           document.getElementById('new-channel-username').value = '';
           loadChannelsAdmin();
@@ -2732,7 +2718,7 @@ video {
         });
         if (res.ok) {
           statusEl.textContent = 'Added!';
-          statusEl.className = 'text-sm text-green-400';
+          statusEl.className = 'text-sm text-yellow-400';
           document.getElementById('new-link-label').value = '';
           document.getElementById('new-link-url').value = '';
           document.getElementById('new-link-key').value = '';
@@ -2797,18 +2783,20 @@ video {
       const title = document.getElementById('new-task-title').value.trim();
       const points = parseInt(document.getElementById('new-task-points').value, 10);
       const platform = document.getElementById('new-task-platform').value;
+      const url = document.getElementById('new-task-url').value.trim();
       const statusEl = document.getElementById('tasks-status');
       if (!title || !points) {
         statusEl.textContent = 'Please fill in title and points.';
         statusEl.className = 'text-sm text-red-400';
         return;
       }
-      const res = await adminFetch('/api/admin?resource=tasks', { method: 'POST', body: JSON.stringify({ title, points, platform }) });
+      const res = await adminFetch('/api/admin?resource=tasks', { method: 'POST', body: JSON.stringify({ title, points, platform, url: url || null }) });
       if (res.ok) {
         statusEl.textContent = 'Added!';
-        statusEl.className = 'text-sm text-green-400';
+        statusEl.className = 'text-sm text-yellow-400';
         document.getElementById('new-task-title').value = '';
         document.getElementById('new-task-points').value = '';
+        document.getElementById('new-task-url').value = '';
         loadTasksAdmin();
       } else {
         const data = await res.json();
@@ -2870,7 +2858,7 @@ video {
         <div class="flex items-center justify-between p-3 bg-gray-800 rounded-lg">
           <span>User ${w.user_id} <span class="text-gray-400 text-sm">— ${w.amount_points}pts via ${w.method}</span></span>
           <div class="flex gap-2">
-            <button onclick="resolveWithdrawal('${w.id}', 'approve')" class="text-green-400 text-sm hover:underline">Approve</button>
+            <button onclick="resolveWithdrawal('${w.id}', 'approve')" class="text-yellow-400 text-sm hover:underline">Approve</button>
             <button onclick="resolveWithdrawal('${w.id}', 'reject')" class="text-red-400 text-sm hover:underline">Reject</button>
           </div>
         </div>
@@ -2928,7 +2916,7 @@ video {
       const data = await res.json();
       if (res.ok) {
         statusEl.textContent = `Sent to ${data.sent}/${data.total} users.`;
-        statusEl.className = 'text-sm text-green-400';
+        statusEl.className = 'text-sm text-yellow-400';
       } else {
         statusEl.textContent = data.error || 'Failed to send.';
         statusEl.className = 'text-sm text-red-400';
@@ -2950,7 +2938,7 @@ video {
       const res = await adminFetch('/api/onboarding', { method: 'POST', body: JSON.stringify({ message }) });
       if (res.ok) {
         statusEl.textContent = 'Saved!';
-        statusEl.className = 'text-sm text-green-400';
+        statusEl.className = 'text-sm text-yellow-400';
       } else {
         statusEl.textContent = 'Failed to save.';
         statusEl.className = 'text-sm text-red-400';
@@ -3005,15 +2993,11 @@ video {
       resultEl.innerHTML = txns.map((t) => `
         <div class="flex items-center justify-between p-3 bg-gray-800 rounded-lg text-sm">
           <span>${t.note || t.type}</span>
-          <span class="${t.amount >= 0 ? 'text-green-400' : 'text-red-400'}">${t.amount >= 0 ? '+' : ''}${t.amount}</span>
+          <span class="${t.amount >= 0 ? 'text-yellow-400' : 'text-red-400'}">${t.amount >= 0 ? '+' : ''}${t.amount}</span>
         </div>
       `).join('');
     }
 
-    function showAds() {
-      alert('Ads section would be shown here');
-    }
-    
     // Load configurations when page loads
     document.addEventListener('DOMContentLoaded', loadConfigurations);
   </script>
